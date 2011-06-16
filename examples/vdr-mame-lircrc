@@ -1,0 +1,87 @@
+#mame end
+begin
+prog = sdlmame
+button = POWER
+repeat = 0
+config = 1
+end
+
+#mame 1 player
+begin
+prog = sdlmame
+button = RED
+repeat = 0
+config = 2
+end
+
+#mame 2 player
+begin
+prog = sdlmame
+button = GREEN
+repeat = 0
+config = 3
+end
+
+#mame insert coin
+begin
+prog = sdlmame
+button = YELLOW
+repeat = 0
+config = 6
+end
+
+#mame menu
+begin
+prog = sdlmame
+button = MENU
+repeat = 0
+config = 15
+end
+
+#mame menu up
+begin
+prog = sdlmame
+button = UP
+repeat = 0
+config = 103
+end
+
+#mame menu down
+begin
+prog = sdlmame
+button = DOWN
+repeat = 0
+config = 108
+end
+
+#mame menu left
+begin
+prog = sdlmame
+button = LEFT
+repeat = 0
+config = 105
+end
+
+#mame menu right
+begin
+prog = sdlmame
+button = RIGHT
+repeat = 0
+config = 6
+end
+
+#mame enter
+begin
+prog = sdlmame
+button = OK
+repeat = 0
+config = 28
+end
+
+#mame pause
+begin
+prog = sdlmame
+button = PLAY
+repeat = 0
+config = 25
+end

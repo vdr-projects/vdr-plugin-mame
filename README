@@ -1,0 +1,74 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by: Thomas Maass <mase@setho.org>
+
+
+
+Project's homepage: http://projects.vdr-developer.org
+
+
+
+Latest version available at: http://projects.vdr-developer.org
+
+
+
+See the file COPYING for license information.
+
+
+
+Description:
+With this plugin you can launch mame-games.
+The plugin will start mame under X, but if someone could
+reactivate the sdl-dvb-driver, if should work over DVB, too.
+Not tested yet.
+
+
+
+Installation:
+You need VDR (of course!) and sdlmame.
+A few roms are welcome, too.
+Unpack the sources into your VDR-plugins-directory, and create a
+symlink to mame, like the other plugins.
+Type make plugins to build the plugin.
+Modify the script "vdr-mame-launch.sh" to your needs, and copy it to
+your path.
+If you want to be able to control mame with your remotecontrol,
+modify the file vdr-mame-lircrc to your needs, and copy it to your
+lirc-config-directory. Make sure, that it is loaded with
+irexec /etc/lirc/vdr-mame-lircrc
+Load the plugin with -P mame
+
+
+
+Configuration:
+At this time, there are only two setup-options:
+Stop VDR before play: The VDR will be stopped, before the game
+is launched. This is recommended, when using a weak machine or
+something like xineliboutput. VDR will be restarted automatically
+after mame has ended. Specify the start / stop commands in the
+"vdr-mame-launch" script.
+
+Rompath: I think, that explains itself.
+
+
+
+lircrc:
+Here are some useful keycodes to create your own lircrc-file for
+the plugin:
+key   keycode  function
+ESC   1        Exit Emulator
+UP    103      Navigate GUI
+DOWN  108
+LEFT  105
+RIGHT 106
+1     2        Start player 1
+2     3        Start player 2
+5     6        Insert coin
+Tab   15       Open in game menu GUI
+Enter 28       OK / Enter in menu
+P     25       Pause game
+F3    61       Reset game
+
+
+
+Have fun!
